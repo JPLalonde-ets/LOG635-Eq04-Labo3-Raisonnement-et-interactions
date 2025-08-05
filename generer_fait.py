@@ -33,6 +33,10 @@ for phrase, grammar_file in phrases_grammars:
     except Exception as e:
         print(f"✗ Erreur pour : {phrase} avec {grammar_file}")
         print(e)
+        
+print("--- FAITS GÉNÉRÉS ---")
+for fact in valid_facts:
+    print(fact)
 
 # Écriture dans le fichier
 with open("faits_generes.py", "w", encoding="utf-8") as f:
@@ -41,7 +45,7 @@ with open("faits_generes.py", "w", encoding="utf-8") as f:
     f.write("    return [\n")
     for fact in valid_facts:
         f.write(f"{fact}\n")
-        print(fact)
+        
     f.write("    ]\n")
 
 print("\nFichier 'faits_generes.py' généré avec succès.")
