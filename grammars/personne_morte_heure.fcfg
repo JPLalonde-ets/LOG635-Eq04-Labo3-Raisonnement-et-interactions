@@ -6,7 +6,7 @@ V -> 'est'
 AD -> 'mort' | 'morte'
 P -> 'à'
 
-Nprop[SEM=<Governeur_White>] -> 'Governeur_White' | 'gouverneur white' | 'white'
+Nprop[SEM=<Gouverneur_White>] -> 'Gouverneur_White' | 'gouverneur white' | 'white'
 Nprop[SEM=<Botaniste_Green>] -> 'Botaniste_Green' | 'botaniste green' | 'green'
 Nprop[SEM=<Docteur_Brown>] -> 'Docteur_Brown' | 'docteur brown' | 'brown'
 Nprop[SEM=<Capitaine_Gray>] -> 'Capitaine_Gray' | 'capitaine gray' | 'gray'
