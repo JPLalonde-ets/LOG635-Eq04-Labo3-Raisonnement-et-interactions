@@ -41,7 +41,7 @@ def choisir_grammaire(phrase):
         return "personne_piece_heure.fcfg"
     else:
         return None
-
+    
 # --- Lecture d'une phrase et ajout dans la KB
 def lire_fait_francais():
     phrase = input("→ Saisis une phrase (ex: Capitaine_Gray était dans le phare à 12h) :\n> ").strip()
@@ -93,3 +93,6 @@ afficher_resultats("Suspects potentiels", "Suspect(x)", "x")
 afficher_resultats("Arme du crime", "ArmeCrime(a)", "a")
 afficher_resultats("Suspects avec arme du crime", "SuspectArme(x, a)", "x", "a")
 afficher_resultats("Coupable", "Coupable(x)", "x")
+
+while True:
+    menu_questions()
