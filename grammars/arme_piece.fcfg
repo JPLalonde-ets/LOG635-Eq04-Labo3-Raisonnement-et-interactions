@@ -1,27 +1,30 @@
 %start S
 
-S[SEM=<Arme_Piece(?vp,?pp)>] -> VP[SEM=?vp] PP[SEM = ?pp]
-VP[SEM=?n] -> Det N[SEM=?n] Pron Vt | Det N[SEM=?n] V
-N[SEM=?np] -> Narme[SEM=?np]
+S[SEM=<Arme_Piece(?vp, ?pp)>] -> NP[SEM=?vp] VP PP[SEM=?pp]
+NP[SEM=?np] -> Det N[SEM=?np]
+
+VP -> 'est'
+VP -> Pron Vt
 Pron -> 'se'
-Vt -> 'trouve' 
-V -> 'est'
-PP[SEM=?p] -> Prep Det Npiece[SEM = ?p]
+Vt -> 'trouve'
+
+PP[SEM=?p] -> Prep Det Npiece[SEM=?p]
 Prep -> 'dans'
 Det -> 'le' | 'la' | 'Le' | 'La' | 'Les' | 'les'
 
+# Noms des pièces
 Npiece[SEM=<Phare>] -> 'phare'
-Npiece[SEM=<Radio_room>] -> 'radio room' | 'radio_room' | 'salle radio'
-Npiece[SEM=<Embarcadère>] -> 'embarcadère' | 'embarcadere' | 'quai'
+Npiece[SEM=<Radio_room>] -> 'radio' 'room' | 'radio_room' | 'salle' 'radio'
+Npiece[SEM=<Embarcadere>] -> 'embarcadère' | 'embarcadere' | 'quai'
 Npiece[SEM=<Plage>] -> 'plage'
 Npiece[SEM=<Observatoire>] -> 'observatoire'
 Npiece[SEM=<Serre>] -> 'serre'
-Npiece[SEM=<Générateur>] -> 'générateur' | 'generateur' | 'salle des machines'
+Npiece[SEM=<Generateur>] -> 'générateur' | 'generateur' | 'salle' 'des' 'machines'
 
-Narme[SEM=<Corde>] -> 'corde'
-Narme[SEM=<Fusil>] -> 'fusil'
-Narme[SEM=<Couteau>] -> 'couteau'
-Narme[SEM=<Clé_anglaise>] -> 'clé anglaise' | 'cle anglaise' | 'clé_anglaise'
-Narme[SEM=<Matraque>] -> 'matraque'
-Narme[SEM=<Poison>] -> 'poison'
-Narme[SEM=<Couteau>] -> 'couteau'
+# Armes
+N[SEM=<Corde>] -> 'corde'
+N[SEM=<Fusil>] -> 'fusil'
+N[SEM=<Couteau>] -> 'couteau'
+N[SEM=<Cle_anglaise>] -> 'clé' 'anglaise' | 'cle' 'anglaise' | 'clé_anglaise'
+N[SEM=<Matraque>] -> 'matraque'
+N[SEM=<Poison>] -> 'poison'
