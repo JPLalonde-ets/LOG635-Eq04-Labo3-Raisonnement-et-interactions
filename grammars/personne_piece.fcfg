@@ -1,14 +1,18 @@
 %start S
 
-S[SEM=<Personne_Piece(?vp,?pp)>] -> VP[SEM=?vp] PP[SEM = ?pp]
-VP[SEM=?n] -> N[SEM=?n] Pron Vt | N[SEM=?n] V
+S[SEM=?sem] -> VP[SEM=?sem]
+
+VP[SEM=<Personne_Piece(?pers, ?lieu)>] -> N[SEM=?pers] V PP[SEM=?lieu]
+VP[SEM=<Personne_Piece(?pers, ?lieu)>] -> N[SEM=?pers] Pron Vt PP[SEM=?lieu]
+
 N[SEM=?np] -> Nprop[SEM=?np]
 Pron -> 'se'
-Vt -> 'trouve' 
+Vt -> 'trouve'
 V -> 'est'
-PP[SEM=?vp] -> Prep Det N[SEM = ?vp]
+
+PP[SEM=?lieu] -> Prep Det N[SEM=?lieu]
 Prep -> 'dans'
-Det -> 'le' | 'la'
+Det -> 'le' | 'la' | "l'" 
 
 N[SEM=<Phare>] -> 'phare'
 N[SEM=<Radio_room>] -> 'radio room' | 'radio_room' | 'salle radio'
@@ -18,7 +22,7 @@ N[SEM=<Observatoire>] -> 'observatoire'
 N[SEM=<Serre>] -> 'serre'
 N[SEM=<Générateur>] -> 'générateur' | 'generateur' | 'salle des machines'
 
-Nprop[SEM=<Governeur_White>] -> 'Governeur_White' | 'gouverneur white' | 'white'
+Nprop[SEM=<Gouverneur_White>] -> 'Gouverneur_White' | 'gouverneur white' | 'white'
 Nprop[SEM=<Botaniste_Green>] -> 'Botaniste_Green' | 'botaniste green' | 'green'
 Nprop[SEM=<Docteur_Brown>] -> 'Docteur_Brown' | 'docteur brown' | 'brown'
 Nprop[SEM=<Capitaine_Gray>] -> 'Capitaine_Gray' | 'capitaine gray' | 'gray'

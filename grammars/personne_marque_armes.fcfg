@@ -7,10 +7,12 @@ S[SEM=<MarqueCleAnglaise(?vp)>] -> VP[SEM=?vp] 'par' 'clé' 'anglaise'
 S[SEM=<MarqueMatraque(?vp)>] -> VP[SEM=?vp] 'par' 'matraque'
 S[SEM=<MarquePoison(?vp)>] -> VP[SEM=?vp] 'par' 'empoisonnement'
 
+
 VP[SEM=?n] -> N[SEM=?n] V Aux 'tué'
 N[SEM=?np] -> Nprop[SEM=?np]
 V -> 'a'
 Aux -> 'été'
+Det -> 'un' | 'une'
 
 Nprop[SEM=<Governeur_White>] -> 'Governeur_White' | 'gouverneur white' | 'white'
 Nprop[SEM=<Botaniste_Green>] -> 'Botaniste_Green' | 'botaniste green' | 'green'
