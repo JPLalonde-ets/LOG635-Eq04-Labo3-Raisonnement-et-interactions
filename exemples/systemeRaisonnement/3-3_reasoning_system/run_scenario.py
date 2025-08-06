@@ -94,5 +94,5 @@ afficher_resultats("Arme du crime", "ArmeCrime(a)", "a")
 afficher_resultats("Suspects avec arme du crime", "SuspectArme(x, a)", "x", "a")
 afficher_resultats("Coupable", "Coupable(x)", "x")
 
-while True:
-    menu_questions()
+# while True:
+#     menu_questions()
